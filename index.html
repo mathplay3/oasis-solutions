@@ -7,6 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="master.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <script>
+      if (localStorage.getItem(‘cookieSeen’) != ‘shown’) {
+        $(‘.cookie-banner’).delay(2000).fadeIn();
+        localStorage.setItem(‘cookieSeen’,’shown’)
+      };
+      $(‘.close’).click(function() {
+        $(‘.cookie-banner’).fadeOut();
+      })
+    </script>
   </head>  
   <body>
     <p> Here at Oasis Solutions, we strive to go the extra mile for our customers to ensure their security and AV needs get met while serving them. "And you will feel secure because there is hope; you will look around and take your rest in security." Job 11:18" </p>
